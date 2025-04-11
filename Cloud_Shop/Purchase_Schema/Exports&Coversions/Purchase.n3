@@ -1,0 +1,57 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+
+<http://iec.ch/TC57/Purchase#Discount>
+  a rdfs:Class ;
+  rdfs:label "#Discount" .
+
+<http://iec.ch/TC57/Purchase#Notification>
+  a rdfs:Class ;
+  rdfs:label "#Notification" .
+
+<http://iec.ch/TC57/Purchase#Order>
+  a rdfs:Class ;
+  rdfs:label "#Order" .
+
+<http://iec.ch/TC57/Purchase#OrderStatus>
+  a rdfs:Class ;
+  rdfs:label "#OrderStatus" ;
+  ns0:stereotype <http://langdale.com.au/2005/UML#enumeration> .
+
+<http://iec.ch/TC57/Purchase#Payment>
+  a rdfs:Class ;
+  rdfs:label "#Payment" .
+
+<http://iec.ch/TC57/Purchase#PaymentMethod>
+  a rdfs:Class ;
+  rdfs:label "#PaymentMethod" ;
+  ns0:stereotype <http://langdale.com.au/2005/UML#enumeration> .
+
+<http://iec.ch/TC57/Purchase#Product>
+  a rdfs:Class ;
+  rdfs:label "#Product" .
+
+<http://iec.ch/TC57/Purchase#Review>
+  a rdfs:Class ;
+  rdfs:label "#Review" .
+
+<http://iec.ch/TC57/Purchase#Shipping>
+  a rdfs:Class ;
+  rdfs:label "#Shipping" .
+
+<http://iec.ch/TC57/Purchase#ShoppingCart>
+  a rdfs:Class ;
+  rdfs:label "#ShoppingCart" .
+
+<http://iec.ch/TC57/Purchase#User>
+  a rdfs:Class ;
+  rdfs:label "#User" .
+
+<http://iec.ch/TC57/Purchase#UserRole>
+  a rdfs:Class ;
+  rdfs:label "#UserRole" ;
+  ns0:stereotype <http://langdale.com.au/2005/UML#enumeration> .
+
+<http://iec.ch/TC57/Purchase#Warehouse>
+  a rdfs:Class ;
+  rdfs:label "#Warehouse" .

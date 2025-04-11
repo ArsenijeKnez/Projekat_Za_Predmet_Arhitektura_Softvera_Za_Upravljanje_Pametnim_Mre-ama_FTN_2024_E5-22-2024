@@ -1,0 +1,82 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix tto: <http://example.org/ecommerce/ontology#> .
+@prefix ttr: <http://example.org/ecommerce/resource#> .
+@prefix prod: <http://iec.ch/TC57/prodaja#> .
+
+# =====================================================
+# CLASSES
+# =====================================================
+
+tto:#Discount
+	rdf:type rdfs:Class;
+	rdfs:label "#Discount"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Notification
+	rdf:type rdfs:Class;
+	rdfs:label "#Notification"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Order
+	rdf:type rdfs:Class;
+	rdfs:label "#Order"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Payment
+	rdf:type rdfs:Class;
+	rdfs:label "#Payment"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Product
+	rdf:type rdfs:Class;
+	rdfs:label "#Product"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Review
+	rdf:type rdfs:Class;
+	rdfs:label "#Review"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Shipping
+	rdf:type rdfs:Class;
+	rdfs:label "#Shipping"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#ShoppingCart
+	rdf:type rdfs:Class;
+	rdfs:label "#ShoppingCart"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#User
+	rdf:type rdfs:Class;
+	rdfs:label "#User"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#Warehouse
+	rdf:type rdfs:Class;
+	rdfs:label "#Warehouse"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+# =====================================================
+# ENUMERATIONS
+# =====================================================
+
+tto:#OrderStatus
+	rdf:type rdfs:Class;
+	rdfs:label "#OrderStatus"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#PaymentMethod
+	rdf:type rdfs:Class;
+	rdfs:label "#PaymentMethod"^^xsd:string;
+	rdfs:isDefinedBy tto: .
+
+tto:#UserRole
+	rdf:type rdfs:Class;
+	rdfs:label "#UserRole"^^xsd:string;
+	rdfs:isDefinedBy tto: .
