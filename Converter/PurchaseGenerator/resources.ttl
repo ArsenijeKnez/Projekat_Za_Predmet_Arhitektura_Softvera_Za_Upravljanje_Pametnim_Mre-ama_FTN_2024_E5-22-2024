@@ -1,0 +1,76 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tto: <http://example.org/purchase/ontology#> .
+@prefix ttr: <http://example.org/purchase/resource#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ttr:Product2 a tto:Product ;
+    rdfs:label "Proizvod 2" ;
+    tto:manages ttr:Inventory2 ;
+    tto:price "129.5"^^xsd:float ;
+    tto:productId 2 .
+
+ttr:User1 a tto:User ;
+    tto:email "marko@example.com" ;
+    tto:hasRole ttr:CUSTOMER ;
+    tto:name "Marko Petrović" ;
+    tto:places ttr:Order1 ;
+    tto:receivesNotification ttr:Notif1 ;
+    tto:userId 1 ;
+    tto:writes ttr:Review1 .
+
+ttr:User2 a tto:User ;
+    tto:email "ana@example.com" ;
+    tto:hasRole ttr:ADMIN ;
+    tto:name "Ana Jovanović" ;
+    tto:receivesNotification ttr:Notif2 ;
+    tto:userId 2 .
+
+ttr:Discount1 a tto:Discount ;
+    tto:discountId 6001 ;
+    tto:percentage "10.0"^^xsd:float .
+
+ttr:Inventory1 a tto:Inventory ;
+    tto:inventoryId 5001 ;
+    tto:quantity 15 .
+
+ttr:Inventory2 a tto:Inventory ;
+    tto:inventoryId 5002 ;
+    tto:quantity 7 .
+
+ttr:Notif1 a tto:Notification ;
+    tto:message "Vaša narudžbina je uspešno plaćena i poslata." ;
+    tto:notificationId 8001 .
+
+ttr:Notif2 a tto:Notification ;
+    tto:message "Sistem obaveštenje: Nova recenzija dodata." ;
+    tto:notificationId 8002 .
+
+ttr:Order1 a tto:Order ;
+    tto:applies ttr:Discount1 ;
+    tto:contains ttr:Product1 ;
+    tto:hasStatus ttr:COMPLETED ;
+    tto:orderDate "2025-10-29"^^xsd:date ;
+    tto:orderId 9001 ;
+    tto:processes ttr:Payment1 ;
+    tto:ships ttr:Shipping1 .
+
+ttr:Payment1 a tto:Payment ;
+    tto:amount "59.99"^^xsd:float ;
+    tto:hasMethod ttr:CREDIT_CARD ;
+    tto:paymentId 3001 .
+
+ttr:Product1 a tto:Product ;
+    rdfs:label "Proizvod 1" ;
+    tto:manages ttr:Inventory1 ;
+    tto:price "59.99"^^xsd:float ;
+    tto:productId 1 ;
+    tto:receivesReview ttr:Review1 .
+
+ttr:Shipping1 a tto:Shipping ;
+    tto:address "Bulevar Oslobođenja 12, Novi Sad" ;
+    tto:shippingId 7001 .
+
+ttr:Review1 a tto:Review ;
+    tto:rating 5 ;
+    tto:reviewId 4001 .
+
