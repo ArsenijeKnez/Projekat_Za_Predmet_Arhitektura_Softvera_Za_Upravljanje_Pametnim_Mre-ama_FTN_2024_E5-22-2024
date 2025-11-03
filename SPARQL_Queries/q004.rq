@@ -1,0 +1,10 @@
+#title: Select users and their emails
+#comment: Shows user names and emails
+#tags: 2 variables, literal values
+#color: ex-green
+
+select ?ime ?email where {
+  ?korisnik rdf:type tto:User ;
+            tto:name ?ime ;
+            tto:email ?email .
+}

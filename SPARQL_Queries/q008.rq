@@ -1,0 +1,9 @@
+#title: Select all discounts applied to orders
+#comment: Finds orders that have a discount applied
+#tags: relationship, 2 variables
+#color: ex-green
+
+select ?porudzbina ?popust where {
+  ?porudzbina rdf:type tto:Order ;
+              tto:applies ?popust .
+}

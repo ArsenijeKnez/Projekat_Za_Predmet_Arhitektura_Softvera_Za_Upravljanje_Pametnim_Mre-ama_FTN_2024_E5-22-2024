@@ -1,0 +1,9 @@
+#title: Select notifications and their messages
+#comment: Returns all notifications with their message content
+#tags: literal, label, 2 variables
+#color: ex-green
+
+select ?obavestenje ?poruka where {
+  ?obavestenje rdf:type tto:Notification ;
+               tto:message ?poruka .
+}

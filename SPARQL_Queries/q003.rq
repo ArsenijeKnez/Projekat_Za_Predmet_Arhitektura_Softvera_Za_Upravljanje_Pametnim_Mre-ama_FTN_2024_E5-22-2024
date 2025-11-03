@@ -1,0 +1,9 @@
+#title: Select all orders with their status
+#comment: Returns orders and their current status
+#tags: 2 variables, simple join
+#color: ex-green
+
+select ?porudzbina ?status where {
+  ?porudzbina rdf:type tto:Order ;
+              tto:hasStatus ?status .
+}

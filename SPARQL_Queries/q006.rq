@@ -1,0 +1,9 @@
+#title: Select orders and their products
+#comment: Joins orders with products they contain
+#tags: object property, join
+#color: ex-green
+
+select ?porudzbina ?proizvod where {
+  ?porudzbina rdf:type tto:Order ;
+              tto:contains ?proizvod .
+}

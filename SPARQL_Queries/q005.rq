@@ -1,0 +1,10 @@
+#title: Select products with price over 500
+#comment: Returns all products whose price is greater than 500
+#tags: filter, comparison, numeric
+#color: ex-green
+
+select ?proizvod ?cena where {
+  ?proizvod rdf:type tto:Product ;
+            tto:price ?cena .
+  filter (?cena > 500)
+}

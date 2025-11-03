@@ -1,0 +1,12 @@
+#title: Select users from Novi Sad
+#comment: Finds users whose address contains "Novi Sad" in their shipping information
+#tags: filter, string match, join
+#color: ex-green
+
+select ?korisnik ?adresa where {
+  ?porudzbina rdf:type tto:Order ;
+              tto:ships ?dostava .
+  ?dostava tto:address ?adresa .
+  ?korisnik tto:places ?porudzbina .
+  filter (regex(?adresa, "Novi Sad", "i"))
+}

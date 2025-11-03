@@ -1,0 +1,26 @@
+#title: Users, Orders and Product Count per Order
+#comment: Demonstrates use of subqueries (two SELECT blocks)
+#tags: advanced, subquery, aggregation
+
+SELECT ?userName ?orderId ?numProducts
+WHERE {
+  {
+    SELECT ?user ?orderId ?userName
+    WHERE {
+      ?user a tto:User ;
+            tto:name ?userName ;
+            tto:places ?order .
+      ?order tto:orderId ?orderId .
+    }
+  }
+  {
+    SELECT ?orderId (COUNT(?product) AS ?numProducts)
+    WHERE {
+      ?order a tto:Order ;
+             tto:orderId ?orderId ;
+             tto:contains ?product .
+    }
+    GROUP BY ?orderId
+  }
+}
+ORDER BY ?userName

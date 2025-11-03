@@ -1,0 +1,9 @@
+#title: Select products and their reviews (if any)
+#comment: Uses OPTIONAL to include products even without reviews
+#tags: optional, left join
+#color: ex-green
+
+select ?proizvod ?recenzija where {
+  ?proizvod rdf:type tto:Product .
+  optional { ?proizvod tto:receivesReview ?recenzija . }
+}

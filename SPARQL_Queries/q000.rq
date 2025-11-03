@@ -1,0 +1,11 @@
+#title: Show system
+#comment: Shows all (subjekt, predikat, objekat) from ontology.
+#tags: osnovni upit, pregled sistema
+#color: ex-white
+#img:diagram
+
+SELECT ?subjekt ?predikat ?objekat
+WHERE {
+  ?subjekt ?predikat ?objekat .
+}
+ORDER BY ?subjekt

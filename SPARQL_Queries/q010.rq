@@ -1,0 +1,9 @@
+#title: Select average product price
+#comment: Calculates the average price of all products
+#tags: aggregate, numeric
+#color: ex-green
+
+select (avg(?cena) as ?prosecnaCena) where {
+  ?proizvod rdf:type tto:Product ;
+            tto:price ?cena .
+}

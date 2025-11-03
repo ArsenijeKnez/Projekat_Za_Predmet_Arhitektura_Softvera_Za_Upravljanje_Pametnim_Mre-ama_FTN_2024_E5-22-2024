@@ -1,0 +1,9 @@
+#title: Select users who wrote reviews
+#comment: Returns users and reviews they wrote
+#tags: object property, 2 variables
+#color: ex-green
+
+select ?korisnik ?recenzija where {
+  ?korisnik rdf:type tto:User ;
+            tto:writes ?recenzija .
+}

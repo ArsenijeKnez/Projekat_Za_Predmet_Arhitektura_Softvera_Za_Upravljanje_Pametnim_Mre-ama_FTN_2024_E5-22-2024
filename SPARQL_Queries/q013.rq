@@ -1,0 +1,10 @@
+#title: Count total number of orders per user
+#comment: Aggregates how many orders each user has placed
+#tags: aggregate, count, grouping
+#color: ex-green
+
+select ?korisnik (count(?porudzbina) as ?brojPorudzbina) where {
+  ?korisnik rdf:type tto:User ;
+            tto:places ?porudzbina .
+}
+group by ?korisnik

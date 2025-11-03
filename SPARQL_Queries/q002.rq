@@ -1,0 +1,8 @@
+#title: Select all products
+#comment: Selects all subjects of type tto:Product
+#tags: 1 graph pattern, 1 variable
+#color: ex-green
+
+select ?proizvod where {
+  ?proizvod rdf:type tto:Product .
+}
